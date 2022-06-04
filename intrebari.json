@@ -1,0 +1,32 @@
+[   
+    {     
+        "intrebare":"Cine a scris cartea Povestea mea?",
+        "variante": ["Michelle Obama", "Stephen King", "Sandra Brown"],
+        "corect": 0
+    },
+    {      
+        "intrebare": "Care este personajul principal din romanul `Stapanul Inelelor`?",
+        "variante": ["Gandalf", "Gollum", "Sauron", "Frodo Baggins"],
+        "corect": 3
+    },
+	{
+		"intrebare": "3. Cine este naratorul in romanul Marele Gatsby?",
+		"variante": ["Nick Carraway", "Jay Gatsby", " Jordan Baker"],
+		"corect": 0
+	},
+	{
+		"intrebare": "4. Cum se numeste revista in care Ion Creanga isi vede publicate povestile si povestirile?",
+		"variante": ["Timpul", "Convorbiri literare", "Familia"],
+		"corect": 1
+	},
+	{
+		"intrebare": "5. Cand se petrece actiunea din romanul “Cronicile din Narnia - Leul, Vrăjitoarea și Dulapul”?",
+		"variante": ["In zilele noastre", "In viitor", " În perioada celui de-Al Doilea Război Mondial"],
+		"corect": 2
+	},
+	{
+		"intrebare": "6. Romanul “Sfaturile unui diavol batran catre unul mai tanar” de C.S. Lewis este scris sub forma epistolara. Cate scrisori contine?",
+		"variante": ["Noua scrisori", "Treizeci si una de scrisori", " Unsprezece scrisori"],
+		"corect": 1
+	}
+]

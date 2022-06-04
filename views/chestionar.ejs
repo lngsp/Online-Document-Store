@@ -1,0 +1,25 @@
+
+<fieldset>
+    <button type="submit" onclick="window.location.href='/'">Pagina principala</button> •
+    <button id="delogare" type="submit" onclick="window.location.href='/delogare'">Delogare</button> 
+</fieldset>
+<br/>
+    <% if (utilizator) { %>
+        <form id="formul" action="/rezultat-chestionar" method="post">
+            <fieldset>
+                <h5>Bine ati venit! Puteti incepe chestionarul!</h5>
+                <%for( var i = 0 in intrebari) { %>
+                    <p><%= intrebari[i].intrebare %></p>
+                    <% for (var j = 0 in intrebari[i].variante) { %>
+                        <input type="radio" name="q<%= i %>" value="<%= j %>"/><%= intrebari[i].variante[j] %><br/> 
+                    <% } %>
+                <% } %>
+                <br/>
+                <button id="submit" type="submit"> Trimite</button> 
+            </fieldset>
+        </form>
+    <%}else{%>
+        <fieldset>
+            <h5>Pentru a avea acces la chestionar trebuie sa te autentifici în cont!</h5>
+        </fieldset>
+    <%}%>

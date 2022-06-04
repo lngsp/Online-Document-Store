@@ -1,0 +1,57 @@
+
+    <% if (utilizator){ %>
+        <% if(utilizator==='admin'){ %>
+                <fieldset>
+                    <h5>Bine ai venit, admin! Aici poti crea baza de date si a face modificari asupra ei.</h5>
+                    <button type="submit" onclick="window.location.href='/creare-bd'">Creati o baza de date</button> •
+                    <button type="submit" onclick="window.location.href='/inserare-bd'">Inserati in baza de date creata</button> •
+                    <button type="submit" onclick="window.location.href='/admin'">Adauga produs in baza de date</button> • 
+                    <button type="submit" onclick="window.location.href='/afisare-produse'">Afisare baza de date creata</button> •
+                    <button id="delogare" type="submit" onclick="window.location.href='/delogare'">Delogare</button> 
+                </fieldset>
+        <%} else {%>
+            <fieldset>
+                <button type="submit" onclick="window.location.href='/'">Pagina principala</button> •
+                <button type="submit" onclick="window.location.href='/chestionar'">Chestionar</button> •
+                <button type="submit" onclick="window.location.href='/vizualizare-cos'">Vizualizati coșul</button> •
+                <button id="delogare" type="submit" onclick="window.location.href='/delogare'">Delogare</button>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <h5>Bine ai venit, <%= utilizator %> !</h5>
+                    <% if(produse){ %>
+                        <h5>Documentele din stoc sunt: </h5>
+                    <table>
+                        <tr>
+                            <th>Id </th>
+                            <th>Titlu document </th>
+                            <th>Autor </th>
+                            <th>Adauga in cos</th>
+                        </tr>              
+                            <% for (var i = 0; i < produse.length; i++){ %>    <!--Eroare la produse.length !?  -->
+                                <tr>
+                                    <td><%= produse[i].id %></td>
+                                    <td><%= produse[i].nume %></td>
+                                    <td><%= produse[i].autor %></td>
+                                    
+                                    <% if(utilizator){ %>
+                                        <form action="/adaugare-cos" method="POST">
+                                            <td><button type = "submit" name="id" value="<%=produse[i].id%>">Adauga in cos</button></td>   
+                                        </form>
+                                    <% } else { %>
+                                        <td><button>Adaugă în coș</button></td>
+                                    <% } %>
+                                </tr>
+                            <% } %>
+                    </table>
+                    <% } else { %>
+                        <h5>Nu sunt produse! (index.js)</h5>
+                    <% } %>
+            </fieldset>
+        <% } %>
+    <% } else { %>
+        <fieldset>
+                    <h5>Bun venit la site-ul de cumparaturi online! Pentru a putea accesa site-ul trebuie sa te autentifici.</h5>
+            <button type="submit" onclick="window.location.href='/autentificare'">Autentificare</button>
+        </fieldset>
+    <% } %>

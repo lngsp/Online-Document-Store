@@ -1,0 +1,36 @@
+<fieldset>
+    <button type="submit" onclick="window.location.href='/'">Pagina principala</button> •
+    <button id="delogare" type="submit" onclick="window.location.href='/delogare'">Delogare</button> 
+</fieldset>
+<br/>
+<form>
+        <% if (utilizator) { %>
+        <fieldset>
+            <h4>Cos de cumparaturi</h4>
+            <div>            
+                <% if(produse) {%>
+                    <table class="center">
+                        <tr>
+                            <th>Id </th>
+                            <th>Numele documentului </th>
+                            <th>Autor </th> 
+                        </tr>
+                        <% for(var produs of produse) { %>
+                            <tr>
+                                <td><%- produs.id -%></td>
+                                <td><%- produs.nume -%></td>
+                                <td><%- produs.autor -%></td>
+                            </tr>    
+                        <%} %>
+                    </table>
+                <% }%>        
+            </div>
+        </fieldset>
+        <%}else{%>
+            <fieldset>
+                <h5>Pentru a avea acces la cosul de cumparaturi trebuie sa te autentifici în cont! </h5>
+            </fieldset>
+        <%}%>
+</form>
+
+    

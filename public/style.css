@@ -1,0 +1,46 @@
+body {  
+    background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074');
+    background-size: auto;
+    font-family: "Ink Free", Times, serif;
+    font-size: 30px;
+    color:rgb(105, 12, 234)
+} 
+
+#titlu{
+    text-align: center;
+    font-family: "Ink Free", Times, serif;
+    color:rgb(110, 22, 234)
+}
+
+footer{
+    font-family: "Ink Free", Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button{
+    background-color: rgb(241, 222, 197);
+    font-family: "Ink Free", Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table{
+    position: center;
+}
+
+/* #delogare{
+    background-color: rgb(206, 122, 239)
+} */
+
+fieldset{
+    text-align: center;
+    background-color:rgba(127, 255, 212, 0.329);
+}
+
+#adauga{
+    background-color: rgb(241, 222, 197);
+    font-family: "Ink Free", Times, serif;
+    font-weight: bold;
+    font-size: 20px
+}

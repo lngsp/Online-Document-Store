@@ -1,0 +1,18 @@
+<fieldset>
+    <button type="submit" onclick="window.location.href='/'">Pagina principala</button> •
+    <button id="delogare" type="submit" onclick="window.location.href='/delogare'">Delogare</button>
+</fieldset>
+
+<br/>
+<fieldset>
+    <h1>Adăugare produs</h1>
+    <form action="/adaugare-produs" method="POST">
+        <label>Id</label> <input type="text" name="id"><br/>
+        <br/>
+        <label>Nume</label> <input type="text" name="nume"><br/>
+        <br/>
+        <label>Autor</label> <input type="text" name="autor"><br/>
+        <br/>
+        <input id="adauga" type="submit" value="Adauga">
+    </form>
+</fieldset>

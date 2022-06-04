@@ -1,0 +1,14 @@
+<fieldset>
+        <button type="submit" onclick="window.location.href='/'">Pagina principala</button> 
+</fieldset>
+<br/>
+<fieldset>
+        <span style="color: rgb(175, 10, 10);"><%-mesajEroare %></span> <br/>
+        <form action="/verificare-autentificare" method="post">
+                <label> Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label> Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit" >Sign in</button>
+        </form>
+</fieldset>
