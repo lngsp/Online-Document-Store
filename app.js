@@ -153,7 +153,7 @@ app.get('/creare-bd', (req, res) => {
 	var con = mysql.createConnection({
 		host: "localhost",
 		user: "root",
-		password: "stefania"
+		password: "****"
 	});
 
 	con.connect(function (err, result) {
@@ -200,7 +200,7 @@ app.get('/inserare-bd', (req, res) => {
 	var dbConnectionpool = mysql.createPool({
 		host: "localhost",
 		user: "root",
-		password: "stefania",
+		password: "****",
 		database: "cumparaturi"
 	});
 
@@ -266,7 +266,7 @@ app.get('/afisare-produse', (req, res) => {
 	var dbConnectionpool = mysql.createPool({
 		host: "localhost",
 		user: "root",
-		password: "stefania",
+		password: "****",
 		database: "cumparaturi"
 	});
 
@@ -344,7 +344,7 @@ app.post('/adaugare-produs', (req, res) => {
 	var dbConnectionpool = mysql.createPool({
 		host: "localhost",
 		user: "root",
-		password: "stefania",
+		password: "****",
 		database: "cumparaturi"
 	});
 
